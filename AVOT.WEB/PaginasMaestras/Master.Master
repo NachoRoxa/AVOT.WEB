@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="AVOT.WEB.PaginasMaestras.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Agencia de viajes on tour</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../Css/EstiloMaster.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="container">
+        <div>
+            <img id="banner" src="../Imagenes/AVOT.png" />
+        </div>
+        <form runat="server">
+            <div>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/Index.aspx">A.V.O.T.</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/Index.aspx">Inicio</a></li>
+                                <li><a href="/Destinos.aspx">Destinos</a></li>
+                                <li id="lnkActividad" runat="server"><a href="/Actividades.aspx">Actividades</a></li>
+                                <li id="lnkAlumnos" runat="server"><a href="/Alumnos.aspx">Lista Alumnos</a></li>
+                                <li id="lnkPagoAlumnos" runat="server"><a href="/PagoAlumno.aspx">Ingresar Pago</a></li>
+                                <li id="lnkDocumentos" runat="server"><a href="/Documentos.aspx">Descarga Documentos</a></li>
+                                <li><a href="/Contacto.aspx">Contacto</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li id="lnkLogin" runat="server">
+                                    <a href="Login.aspx"><span class="glyphicon glyphicon-log-in"></span>Iniciar Sesion</a>
+                                </li>
+                                <li id="lnkRecuperarContraseña" runat="server">
+                                    <a href="RecuperarContraseña.aspx">Recuperar contraseña</a>
+                                </li>
+                                <li id="lnkCerrarSesion" runat="server">
+                                    <asp:Button class="btn btn-primary navbar-btn" ID="btnCerrarSesion" runat="server" Text="Cerrar sesion" OnClick="btnCerrarSesion_Click" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="row">
+                <asp:ContentPlaceHolder ID="InfoPagina" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
