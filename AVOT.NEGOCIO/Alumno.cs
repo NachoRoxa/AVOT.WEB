@@ -97,6 +97,9 @@ namespace AVOT.NEGOCIO
         //    return tabla;
         //}
 
+        /*
+         * Este es un metodo que listara los alumnos del curso
+         */
         public List<Alumno> ListarAlumno(string runAp)
         {
             try
